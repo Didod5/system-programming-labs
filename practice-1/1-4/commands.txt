@@ -1,0 +1,22 @@
+$ yes > /dev/null &
+[2] 14844
+
+
+$ ps aux | grep yes
+user       14844  100  0.0   3128  1536 pts/5    R    15:31   0:41 yes
+user       15101  0.0  0.0   4092  2048 pts/5    S+   15:32   0:00 grep --color=auto yes
+
+
+$ top
+top - 15:33:00 up  1:09,  1 user,  load average: 1.64, 1.27, 0.83
+Tasks:  41 total,   2 running,  39 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6.4 us,  7.1 sy,  0.0 ni, 86.3 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st 
+MiB Mem :   7844.2 total,   6557.8 free,   1236.4 used,    202.7 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   6607.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                  
+  14844 user      20   0    3128   1536   1536 R 100.0   0.0   2:52.75 yes  
+
+
+$ kill 14844
+[2]-  Terminated              yes > /dev/null

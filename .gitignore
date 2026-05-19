@@ -1,11 +1,17 @@
 # Prerequisites
 *.d
-
+.gitignore
 # Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
+task
+reader
+writer
+client
+server
+*.txt
 
 # Precompiled Headers
 *.gch
@@ -39,3 +45,4 @@
 
 # debug information files
 *.dwo
+*.log
